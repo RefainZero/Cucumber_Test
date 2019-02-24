@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" verbose="1" parallel="false" thread-count="1">
-    <test thread-count="1" verbose="1" name="话费购项目-系统流程测试监控" preserve-order="true">
+    <test thread-count="1" verbose="1" name="demo" preserve-order="true">
         <classes>
-            <!-- 添加报告标题-->
             <class name="com.cucumber.demo.RunCukesTest"/>
         </classes>
     </test>
