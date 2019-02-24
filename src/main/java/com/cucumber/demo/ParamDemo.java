@@ -14,6 +14,7 @@ public class ParamDemo {
 
     @Given("^用户正停留在360影视登录页$")
     public void goToCsdn() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.navigate().to("https://i.360kan.com/login");
         driver.manage().window().maximize();

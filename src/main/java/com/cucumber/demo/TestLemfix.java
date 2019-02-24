@@ -14,9 +14,10 @@ import java.util.concurrent.TimeUnit;
 public class TestLemfix {
 
     WebDriver driver;
-    
+
     @Given("^I navigated to lemfix site$")
     public void i_navigated_to_lemfix_site() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -37,7 +38,7 @@ public class TestLemfix {
         username.sendKeys(us_name);
         password.sendKeys(us_psswd);
         loginBTN.click();
-        
+
         Thread.sleep(1000);
     }
 
@@ -45,11 +46,11 @@ public class TestLemfix {
     public void i_verify_login_result(String rs) throws Throwable {
         String title = driver.getTitle();
         String result;
-        if(title.contains("lemfix致力打造最专业的测试技术社区")){
+        if (title.contains("lemfix致力打造最专业的测试技术社区")) {
             result = "fail";
-        }else if(title.equals("Lemfix")){
+        } else if (title.equals("Lemfix")) {
             result = "success";
-        }else{
+        } else {
             result = null;
         }
         System.out.println(title);
