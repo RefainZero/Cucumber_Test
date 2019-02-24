@@ -1,6 +1,6 @@
-# 行为驱动框架（cucumber）
+# 行为驱动框架（cucumber）练习案例
 
-##要求环境：
+## 要求环境：
 
 1、jdk1.8 <br/>
 2、maven、junit<br/>
@@ -18,4 +18,4 @@
 
 ## 报告展示
 
-![测试报告](http://45.250.40.185/RefainZero/linktech-autowebtest/raw/master/img/report.png)
+![测试报告](https://raw.githubusercontent.com/RefainZero/Cucumber_Test/master/report.png)
