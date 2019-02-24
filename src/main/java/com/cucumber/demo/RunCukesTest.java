@@ -1,32 +1,27 @@
-import com.aventstack.extentreports.ExtentReports;
+package com.cucumber.demo;
+
 import com.aventstack.extentreports.ResourceCDN;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import org.junit.BeforeClass;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import java.io.File;
-
-@RunWith(Cucumber.class)
+//加入注释语句位置，不能运行所有用例集合
+//@RunWith(Cucumber.class)
 @ContextConfiguration("classpath:cucumber.xml")
 @CucumberOptions(
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/extent-report/report.html"},//1
         format = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},//2
         features = {"src/test/resources/feature/"},
-        glue = {"com.cucumber"}
-
-
-        //tags = {
-        //        "~@performance","~@skip"
-        //}
+        glue = {"com.cucumber.demo"}
 )
-public class RunCukesTest{
+public class RunCukesTest extends AbstractTestNGCucumberTests {
 
     @BeforeClass
     public static void setup() {
