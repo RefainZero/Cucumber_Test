@@ -4,9 +4,7 @@ import com.aventstack.extentreports.ResourceCDN;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,8 +17,8 @@ import java.io.File;
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/extent-report/report.html"},//1
         format = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},//2
         features = {"src/test/resources/feature/"},
-        glue = {"com.cucumber.demo"}
-)
+        glue = {"com.cucumber.demo","com.po.demo"},
+        monochrome = true)
 public class RunCukesTest extends AbstractTestNGCucumberTests {
 
     @BeforeClass
