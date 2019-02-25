@@ -18,4 +18,5 @@
 
 ## 报告展示
 
-![测试报告](https://raw.githubusercontent.com/RefainZero/Cucumber_Test/master/report.png)
+![测试报告附图1](https://raw.githubusercontent.com/RefainZero/Cucumber_Test/master/report.png)
+![测试报告附图2](https://raw.githubusercontent.com/RefainZero/Cucumber_Test/master/report1.png)
